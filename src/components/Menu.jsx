@@ -7,12 +7,15 @@ import MenuItemDropdown from "./MenuItemDropdown";
 const StyledMenu = styled.ul`
   display: flex;
   gap: 1em;
+  position: relative;
+  z-index: 3;
 `;
 
 const Menu = (props) => {
   return (
     <nav>
       <StyledMenu>
+        <MenuItemSingle page="Início"></MenuItemSingle>
         <MenuItemDropdown page="Sobre nós">
           <MenuItemSingle page="IEEE"></MenuItemSingle>
           <MenuItemSingle page="Ramo"></MenuItemSingle>

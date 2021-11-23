@@ -16,6 +16,7 @@ const ItemButton = styled.button`
   font-weight: 500;
   cursor: pointer;
   width: 7em;
+  position: relative;
 `;
 
 const MenuItemSingle = (props) => {
