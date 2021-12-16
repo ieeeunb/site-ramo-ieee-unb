@@ -7,6 +7,13 @@
   Gatsby minimal starter
 </h1>
 
+**Cloning with Gatsby.**
+
+Use this code:
+```shell
+"gatsby new site-ramo-ieee-unb https://github.com/ieeeunb/site-ramo-ieee-unb"
+ ```
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
