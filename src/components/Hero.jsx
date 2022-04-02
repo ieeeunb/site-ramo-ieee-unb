@@ -6,6 +6,7 @@ import slide1 from "../images/slide-1.png";
 import slide2 from "../images/slide-2.png";
 import slide3 from "../images/slide-3.png";
 import Abstract from "./Abstract";
+import Container from "./Layout/Container";
 
 const ActiveSlide = styled.div`
   border-radius: 100%;
@@ -52,50 +53,52 @@ const Hero = (props) => {
 
   const [activeImage, setActiveImage] = useState(images[0]);
   return (
-    <Carousel fade variant="dark" interval={2000}>
-      <Carousel.Item>
-        <SlideShow>
-          <Abstract></Abstract>
-          <HeroImages>
-            <LeftSlide style={{ backgroundColor: "green" }} />
-            <ActiveSlide
-              style={{ backgroundColor: "red" }}
-              src={images[2]}
-              alt=""
-            />
-            <RightSlide style={{ backgroundColor: "blue" }} />
-          </HeroImages>
-        </SlideShow>
-      </Carousel.Item>
-      <Carousel.Item>
-        <SlideShow>
-          <Abstract></Abstract>
-          <HeroImages>
-            <LeftSlide style={{ backgroundColor: "red" }} />
-            <ActiveSlide
-              style={{ backgroundColor: "blue" }}
-              src={images[2]}
-              alt=""
-            />
-            <RightSlide style={{ backgroundColor: "green" }} />
-          </HeroImages>
-        </SlideShow>
-      </Carousel.Item>
-      <Carousel.Item>
-        <SlideShow>
-          <Abstract></Abstract>
-          <HeroImages>
-            <LeftSlide />
-            <ActiveSlide
-              style={{ backgroundColor: "green" }}
-              src={images[2]}
-              alt=""
-            />
-            <RightSlide />
-          </HeroImages>
-        </SlideShow>
-      </Carousel.Item>
-    </Carousel>
+    <Container margin="1rem">
+      <Carousel fade variant="dark" interval={2000}>
+        <Carousel.Item>
+          <SlideShow>
+            <Abstract></Abstract>
+            <HeroImages>
+              <LeftSlide style={{ backgroundColor: "green" }} />
+              <ActiveSlide
+                style={{ backgroundColor: "red" }}
+                src={images[2]}
+                alt=""
+              />
+              <RightSlide style={{ backgroundColor: "blue" }} />
+            </HeroImages>
+          </SlideShow>
+        </Carousel.Item>
+        <Carousel.Item>
+          <SlideShow>
+            <Abstract></Abstract>
+            <HeroImages>
+              <LeftSlide style={{ backgroundColor: "red" }} />
+              <ActiveSlide
+                style={{ backgroundColor: "blue" }}
+                src={images[2]}
+                alt=""
+              />
+              <RightSlide style={{ backgroundColor: "green" }} />
+            </HeroImages>
+          </SlideShow>
+        </Carousel.Item>
+        <Carousel.Item>
+          <SlideShow>
+            <Abstract></Abstract>
+            <HeroImages>
+              <LeftSlide />
+              <ActiveSlide
+                style={{ backgroundColor: "green" }}
+                src={images[2]}
+                alt=""
+              />
+              <RightSlide />
+            </HeroImages>
+          </SlideShow>
+        </Carousel.Item>
+      </Carousel>
+    </Container>
   );
 };
 

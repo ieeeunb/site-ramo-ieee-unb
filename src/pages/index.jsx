@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
+import Statistics from "../components/Statistics";
 
 // markup
 const IndexPage = () => {
@@ -13,6 +14,7 @@ const IndexPage = () => {
     <Layout>
       <Header />
       <Hero />
+      <Statistics />
       <Footer />
     </Layout>
   );
