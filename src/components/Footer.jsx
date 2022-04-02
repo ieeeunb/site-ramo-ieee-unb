@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import facebook from "../images/facebook-icon.svg";
-import email from "../images/email-icon.svg";
-import linkedin from "../images/linkedin-icon.svg";
-import instagram from "../images/instagram-icon.svg";
-import youtube from "../images/youtube-icon.svg";
+import facebook from "src/assets/images/facebook-icon.svg";
+import email from "src/assets/images/email-icon.svg";
+import linkedin from "src/assets/images/linkedin-icon.svg";
+import instagram from "src/assets/images/instagram-icon.svg";
+import youtube from "src/assets/images/youtube-icon.svg";
 
 const StyledFooter = styled.footer`
   display: flex;

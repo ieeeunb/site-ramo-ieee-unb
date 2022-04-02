@@ -30,5 +30,8 @@
     "react-dom": "^17.0.1",
     "styled-components": "^5.3.3",
     "use-http": "^1.0.26"
+  },
+  "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.8"
   }
 }

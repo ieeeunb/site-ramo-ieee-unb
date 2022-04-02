@@ -1,8 +1,8 @@
 import React, { useLayoutEffect } from "react";
 import useFetch from "use-http";
-import Container from "./Layout/Container";
-import Diamond from "./Layout/Diamond";
-import Flex from "./Layout/Flex";
+import Container from "../Layout/Container";
+import Diamond from "../Layout/Diamond";
+import Flex from "../Layout/Flex";
 import styled from "styled-components";
 import { useState } from "react";
 

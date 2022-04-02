@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import styled, { css } from "styled-components";
 
-import slide1 from "../images/slide-1.png";
-import slide2 from "../images/slide-2.png";
-import slide3 from "../images/slide-3.png";
+import slide1 from "../../assets/images/slide-1.png";
+import slide2 from "../../assets/images/slide-2.png";
+import slide3 from "../../assets/images/slide-3.png";
 import Abstract from "./Abstract";
-import Container from "./Layout/Container";
+import Container from "../Layout/Container";
 
 const ActiveSlide = styled.div`
   border-radius: 100%;
