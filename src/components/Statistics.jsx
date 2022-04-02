@@ -6,7 +6,7 @@ import Flex from "./Layout/Flex";
 import styled from "styled-components";
 import { useState } from "react";
 
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = process.env.GATSBY_APP_API_URL;
 
 const Statistics = () => {
   const [statistics, setStatistics] = useState([]);
