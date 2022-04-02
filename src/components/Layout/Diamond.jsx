@@ -18,7 +18,7 @@ const Inside = styled.div`
   text-align: center;
   h1 {
     color: #303b42;
-    font-size: ${(props) => (props.title.length > 10 ? "0.7rem" : "1.06rem")};
+    font-size: ${(props) => (props?.title?.length > 10 ? "0.7rem" : "1.06rem")};
     font-weight: bold;
     padding: 0 0.5rem;
     height: 41px;
@@ -26,7 +26,7 @@ const Inside = styled.div`
   }
 
   h2 {
-    color: ${(props) => (props.variant === "orange" ? "white" : "#FF8040")};
+    color: ${(props) => (props?.variant === "orange" ? "white" : "#FF8040")};
     font-size: 3rem;
     margin: 0;
     line-height: 2.5rem;
@@ -35,10 +35,10 @@ const Inside = styled.div`
 
 const Diamond = (props) => {
   return (
-    <Wrapper variant={props.variant}>
-      <Inside variant={props.variant} title={props.data.title}>
-        <h1>{props.data.title}</h1>
-        <h2>{props.data.value}</h2>
+    <Wrapper variant={props?.variant}>
+      <Inside variant={props?.variant} title={props?.data?.title}>
+        <h1>{props?.data?.title}</h1>
+        <h2>{props?.data?.value}</h2>
       </Inside>
     </Wrapper>
   );
