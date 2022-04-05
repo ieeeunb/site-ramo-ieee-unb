@@ -17,6 +17,12 @@ const ItemButton = styled.button`
   cursor: pointer;
   width: 7em;
   position: relative;
+
+  transition: all 5000ms;
+  @media (max-width: 1050px) {
+    width: 100%;
+    border-radius: 20px;
+  }
 `;
 
 const MenuItemSingle = (props) => {

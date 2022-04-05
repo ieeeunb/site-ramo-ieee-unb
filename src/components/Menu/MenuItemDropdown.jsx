@@ -17,6 +17,11 @@ const ItemButton = styled.button`
   cursor: pointer;
   width: 7em;
   position: relative;
+
+  @media (max-width: 1050px) {
+    width: 100%;
+    border-radius: 20px;
+  }
 `;
 
 const SubItemList = styled.ul`
@@ -46,6 +51,15 @@ const SubItemList = styled.ul`
 
   li {
     margin: 0.5em 0;
+  }
+  @media (max-width: 1050px) {
+    position: static;
+    width: 100%;
+    border-radius: 20px;
+
+    li {
+      margin: 0;
+    }
   }
 `;
 

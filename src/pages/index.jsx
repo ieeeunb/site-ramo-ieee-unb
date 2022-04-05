@@ -13,9 +13,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <Header />
-      <Hero />
+      {/* <Hero /> */}
       <Statistics />
-      <Footer />
+      {/* <Footer /> */}
     </Layout>
   );
 };
