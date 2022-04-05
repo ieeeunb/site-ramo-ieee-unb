@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import Menu from "./Menu";
+import Menu from "src/components/Menu";
 
-import logo from "../images/logo.svg";
+import logo from "src/assets/images/logo.svg";
 
 const HeaderBar = styled.header`
   display: flex;

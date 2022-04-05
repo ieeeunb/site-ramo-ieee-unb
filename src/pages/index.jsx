@@ -2,11 +2,11 @@ import * as React from "react";
 
 import "normalize.css";
 
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Footer from "../components/Footer";
-import Statistics from "../components/Statistics";
+import Layout from "src/components/Layout";
+import Header from "src/components/Header";
+import Hero from "src/components/Home/Hero";
+import Footer from "src/components/Footer";
+import Statistics from "src/components/Home/Statistics";
 
 // markup
 const IndexPage = () => {

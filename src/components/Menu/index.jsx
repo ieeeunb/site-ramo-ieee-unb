@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import MenuItemSingle from "./MenuItemSingle";
-import MenuItemDropdown from "./MenuItemDropdown";
+import MenuItemSingle from "src/components/Menu/MenuItemSingle";
+import MenuItemDropdown from "src/components/Menu/MenuItemDropdown";
 
 const StyledMenu = styled.ul`
   display: flex;
