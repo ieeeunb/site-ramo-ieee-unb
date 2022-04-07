@@ -1,32 +1,32 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import useFetch from "use-http";
 import Container from "../Layout/Container";
 import Diamond from "../Layout/Diamond";
 import Flex from "../Layout/Flex";
-import styled from "styled-components";
 import { useState } from "react";
 
-const apiUrl = process.env.GATSBY_APP_API_URL;
+import styled from "styled-components";
+
+import { getStatistics } from "src/services/statistics";
 
 const Statistics = () => {
   const [statistics, setStatistics] = useState([]);
-  const { get, response, loading, error } = useFetch(apiUrl);
 
-  useLayoutEffect(() => {
-    const getStatistics = async () => {
-      await get("/statistics");
-      if (response.ok) {
-        setStatistics(response.data.data);
-      }
-    };
-    getStatistics();
-  }, []);
+		useEffect(() => {
+			getStatistics()
+			.then((data) => {
+
+				setStatistics(data.data);
+
+			})
+		}, []);
 
   return (
     <Container color="rgba(48, 59, 66, 0.05)">
       <Flex justify="center" gap="3rem">
         {statistics.map((statistic) => (
           <Diamond
+												key={statistic.id}
             variant={statistic.attributes.variant}
             data={statistic.attributes}
           ></Diamond>
