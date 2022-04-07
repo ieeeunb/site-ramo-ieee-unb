@@ -2,7 +2,7 @@ const apiUrl = process.env.GATSBY_APP_API_URL;
 
 export async function getStatistics() {
 	try {
-		const res = await fetch(`${apiUrl}/api/statistics`)
+		const res = await fetch(`${apiUrl}/statistics`)
 	
 		if (!res.ok) {
 			throw new Error('Erro ao buscar estatísticas.');
