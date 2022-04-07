@@ -7,33 +7,22 @@ import { useState } from "react";
 
 import styled from "styled-components";
 
-import { getStatistics } from "src/services/statistics";
+const Statistics = (props) => {
 
-const Statistics = () => {
-  const [statistics, setStatistics] = useState([]);
+	return (
+			<Container color="rgba(48, 59, 66, 0.05)">
+					<Flex justify="center" gap="3rem">
+							{props.statistics.map((statistic) => (
+									<Diamond
+											key={statistic.id}
+											variant={statistic.attributes.variant}
+											data={statistic.attributes}
+									></Diamond>
+							))}
+					</Flex>
+			</Container>
+	);
 
-		useEffect(() => {
-			getStatistics()
-			.then((data) => {
-
-				setStatistics(data.data);
-
-			})
-		}, []);
-
-  return (
-    <Container color="rgba(48, 59, 66, 0.05)">
-      <Flex justify="center" gap="3rem">
-        {statistics.map((statistic) => (
-          <Diamond
-												key={statistic.id}
-            variant={statistic.attributes.variant}
-            data={statistic.attributes}
-          ></Diamond>
-        ))}
-      </Flex>
-    </Container>
-  );
 };
 
 export default Statistics;

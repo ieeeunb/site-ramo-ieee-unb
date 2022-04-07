@@ -14,15 +14,28 @@ const FooterWrapper = styled.footer`
 
 const FirstFooter = styled.div`
 	display: flex;
+
+	@media(max-width: 700px) {
+		flex-direction: column;
+		height: 20em;
+	}
+
 	flex-direction: row;
+	height: 7em;
+	
 	justify-content: space-around;
 	align-items: center;
 
 	background-color: #303B42;
-	height: 7em;
 `;
 
 const SecondFooter = styled.div`
+
+	@media(max-width: 400px) {
+		text-align: center;
+		height: 5em;
+	}
+
 	display: flex;
 	justify-content: center;
 
@@ -34,6 +47,11 @@ const SecondFooter = styled.div`
 `;
 
 const Address = styled.div`
+
+	@media(max-width: 700px) {
+		text-align: center;
+	}
+
  max-width: 20em;
 	max-height: 5em;
 
@@ -42,6 +60,10 @@ const Address = styled.div`
 `;
 
 const NewsletterLink = styled.div`
+	@media(max-width: 700px) {
+		max-width: 20em;
+	}
+
 	max-width: 7em;
 
 	color: #3AB9FF;

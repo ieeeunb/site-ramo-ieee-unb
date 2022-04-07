@@ -8,16 +8,30 @@ import Hero from "src/components/Home/Hero";
 import Footer from "src/components/Footer";
 import Statistics from "src/components/Home/Statistics";
 
+import { getStatistics } from "../services/statistics";
+
 // markup
 const IndexPage = () => {
-  return (
-    <Layout>
-      <Header />
-      <Hero />
-      <Statistics />
-      <Footer />
-    </Layout>
-  );
+
+	const [statistics, setStatistics] = React.useState([]);
+	
+	React.useEffect(() => {
+		getStatistics()
+		.then((data) => {
+			setStatistics(data.props.data);
+		})
+	}, [])
+
+	return (
+			<Layout>
+					<Header />
+					<Hero />
+					<Statistics 
+						statistics={statistics}
+					/>
+					<Footer />
+			</Layout>
+	);
 };
 
 export default IndexPage;
