@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import "normalize.css";
+import "./index.css";
 
 import Layout from "src/components/Layout";
 import Header from "src/components/Header";
@@ -18,19 +19,24 @@ const IndexPage = () => {
 	React.useEffect(() => {
 		getStatistics()
 		.then((data) => {
+			console.log(data);
 			setStatistics(data.props.data);
 		})
 	}, [])
 
 	return (
-			<Layout>
-					<Header />
+		<Layout>
+			<div className="site">
+				<Header />
+				<div className="site-content">
 					<Hero />
 					<Statistics 
 						statistics={statistics}
 					/>
-					<Footer />
-			</Layout>
+				</div>
+				<Footer />
+			</div>		
+		</Layout>
 	);
 };
 

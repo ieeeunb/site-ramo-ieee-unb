@@ -10,17 +10,19 @@ import styled from "styled-components";
 const Statistics = (props) => {
 
 	return (
-			<Container color="rgba(48, 59, 66, 0.05)">
-					<Flex justify="center" gap="3rem">
-							{props.statistics.map((statistic) => (
-									<Diamond
-											key={statistic.id}
-											variant={statistic.attributes.variant}
-											data={statistic.attributes}
-									></Diamond>
-							))}
-					</Flex>
-			</Container>
+		<Container color="rgba(48, 59, 66, 0.05)">
+				<Flex justify="center" gap="3rem">
+						{ props.statistics ?
+							props.statistics.map((statistic) => (
+								<Diamond
+									key={statistic.id}
+									variant={statistic.attributes.variant}
+									data={statistic.attributes}
+								></Diamond>
+							)) : (<></>)
+						}
+				</Flex>
+		</Container>
 	);
 
 };
