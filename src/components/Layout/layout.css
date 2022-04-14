@@ -3,7 +3,7 @@
 html {
   padding: 0;
   margin: 0;
-  max-height: 100ch;
+  min-height: 100vh;
 }
 
 html,

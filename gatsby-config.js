@@ -1,3 +1,7 @@
+require("dotenv").config({
+	path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -10,12 +14,18 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-root-import",
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/assets/images/",
-      },
-      __key: "images",
+					resolve: "gatsby-source-filesystem",
+					options: {
+							name: "images",
+							path: "./src/assets/images/",
+					},
+					__key: "images",
     },
+				{
+					resolve: `gatsby-plugin-env-variables`,
+					options: {
+						allowList: ["GATSBY_APP_API_URL"]
+					},
+				},
   ],
 };
