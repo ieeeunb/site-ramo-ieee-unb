@@ -17,12 +17,18 @@ const ItemButton = styled.button`
   cursor: pointer;
   width: 7em;
   position: relative;
+
+  @media (max-width: 1050px) {
+    width: 100%;
+    border-radius: 20px;
+    background-color: ${(props) => (props.subpage ? "#eeeeee" : "white")};
+  }
 `;
 
 const MenuItemSingle = (props) => {
   return (
     <MenuListItem>
-      <ItemButton>{props.page}</ItemButton>
+      <ItemButton subpage={props?.subpage}>{props.page}</ItemButton>
     </MenuListItem>
   );
 };

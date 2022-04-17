@@ -7,6 +7,7 @@ const Flex = styled.div`
   gap: ${(props) => (props.gap ? props.gap : "1.5rem")};
   align-items: ${(props) => (props.align ? props.align : "center")};
   flex-wrap: wrap;
+  width: ${(props) => (props.width ? props.width : "auto")};
 `;
 
 export default Flex;

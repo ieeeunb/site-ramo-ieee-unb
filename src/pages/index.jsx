@@ -13,31 +13,27 @@ import { getStatistics } from "../services/statistics";
 
 // markup
 const IndexPage = () => {
+  const [statistics, setStatistics] = React.useState([]);
 
-	const [statistics, setStatistics] = React.useState([]);
-	
-	React.useEffect(() => {
-		getStatistics()
-		.then((data) => {
-			console.log(data);
-			setStatistics(data.props.data);
-		})
-	}, [])
+  React.useEffect(() => {
+    getStatistics().then((data) => {
+      console.log(data);
+      setStatistics(data.props.data);
+    });
+  }, []);
 
-	return (
-		<Layout>
-			<div className="site">
-				<Header />
-				<div className="site-content">
-					<Hero />
-					<Statistics 
-						statistics={statistics}
-					/>
-				</div>
-				<Footer />
-			</div>		
-		</Layout>
-	);
+  return (
+    <Layout>
+      <div className="site">
+        <Header />
+        <div className="site-content">
+          <Hero />
+          <Statistics statistics={statistics} />
+        </div>
+        <Footer />
+      </div>
+    </Layout>
+  );
 };
 
 export default IndexPage;
