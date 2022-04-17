@@ -9,6 +9,7 @@ const StyledNav = styled.nav`
     width: 100%;
     position: absolute;
     top: 5rem;
+    z-index: 5;
 
     display: none;
     ${(props) =>
@@ -37,7 +38,7 @@ const StyledMenu = styled.ul`
   display: flex;
   gap: 1em;
   position: relative;
-  z-index: 3;
+  z-index: 5;
 
   @media (max-width: 1050px) {
     flex-direction: column;

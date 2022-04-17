@@ -4,6 +4,7 @@ import Flex from "src/components/Layout/Flex";
 import Menu from "src/components/Menu";
 
 import logo from "src/assets/images/logo.svg";
+import hamburguer from "src/assets/hamburguer-menu.svg";
 import { useState } from "react";
 
 const HeaderBar = styled.header`
@@ -24,22 +25,57 @@ const HeaderBar = styled.header`
   }
 `;
 
+const Logo = styled.img`
+  @media (max-width: 550px) {
+    width: 220px;
+  }
+`;
+
+const MenuButton = styled.img`
+  @media (min-width: 1050px) {
+    display: none;
+  }
+
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 40px;
+
+  @media (max-width: 450px) {
+    right: 20px;
+  }
+`;
+
+const MenuToggle = styled.input`
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 40px;
+  opacity: 0;
+  cursor: pointer;
+
+  @media (max-width: 450px) {
+    right: 20px;
+  }
+`;
+
 const Header = (props) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <HeaderBar>
       <Flex justify="space-between" width="100%">
         <a href="/">
-          <img src={logo} alt="Logo do Ramo IEEE UnB" />
+          <Logo src={logo} alt="Logo do Ramo IEEE UnB" />
         </a>
-        <input
+
+        <MenuButton src={hamburguer} alt="" />
+        <MenuToggle
           value={showMenu}
           onChange={(e) => setShowMenu(!showMenu)}
           type="checkbox"
           name=""
           id=""
         />
-        {/* <FontAwesomeIcon icon="fa-solid fa-bars" /> */}
       </Flex>
       <Menu showMenu={showMenu}></Menu>
     </HeaderBar>
