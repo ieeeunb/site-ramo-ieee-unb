@@ -53,16 +53,16 @@ const Menu = (props) => {
       <StyledMenu>
         <MenuItemSingle page="Início"></MenuItemSingle>
         <MenuItemDropdown page="Sobre nós">
-          <MenuItemSingle page="IEEE"></MenuItemSingle>
-          <MenuItemSingle page="Ramo"></MenuItemSingle>
-          <MenuItemSingle page="Capítulos"></MenuItemSingle>
-          <MenuItemSingle page="Grupos de Afinidade"></MenuItemSingle>
-          <MenuItemSingle page="Prêmios e conquistas"></MenuItemSingle>
+          <MenuItemSingle subpage page="IEEE"></MenuItemSingle>
+          <MenuItemSingle subpage page="Ramo"></MenuItemSingle>
+          <MenuItemSingle subpage page="Capítulos"></MenuItemSingle>
+          <MenuItemSingle subpage page="Grupos de Afinidade"></MenuItemSingle>
+          <MenuItemSingle subpage page="Prêmios e conquistas"></MenuItemSingle>
         </MenuItemDropdown>
-        <MenuItemDropdown page="Atividades">
-          <MenuItemSingle page="Eventos"></MenuItemSingle>
-          <MenuItemSingle page="Projetos"></MenuItemSingle>
-          <MenuItemSingle page="Processos Seletivos"></MenuItemSingle>
+        <MenuItemDropdown subpage page="Atividades">
+          <MenuItemSingle subpage page="Eventos"></MenuItemSingle>
+          <MenuItemSingle subpage page="Projetos"></MenuItemSingle>
+          <MenuItemSingle subpage page="Processos Seletivos"></MenuItemSingle>
         </MenuItemDropdown>
         <MenuItemSingle page="Notícias"></MenuItemSingle>
         <MenuItemSingle page="Galeria"></MenuItemSingle>
