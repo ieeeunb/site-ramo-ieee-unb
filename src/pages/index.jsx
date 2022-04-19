@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import "normalize.css";
-import "./index.css";
+import "src/pages/index.css";
 
 import Layout from "src/components/Layout";
 import Header from "src/components/Header";
@@ -9,7 +9,7 @@ import Hero from "src/components/Home/Hero";
 import Footer from "src/components/Footer";
 import Statistics from "src/components/Home/Statistics";
 
-import { getStatistics } from "../services/statistics";
+import { getStatistics } from "src/services/statistics";
 
 // markup
 const IndexPage = () => {
@@ -17,7 +17,6 @@ const IndexPage = () => {
 
   React.useEffect(() => {
     getStatistics().then((data) => {
-      console.log(data);
       setStatistics(data.props.data);
     });
   }, []);
