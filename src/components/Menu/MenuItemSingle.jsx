@@ -6,11 +6,11 @@ const MenuListItem = styled.li`
 `;
 
 const ItemButton = styled.button`
-  border-radius: 20%/50%;
+  border-radius: 18px;
   padding: 1em;
   border: none;
   background-color: white;
-  box-shadow: 5px 5px 20px 1px #afafaf;
+  box-shadow: 0px 3px 5px rgb(0 0 0 / 20%);
   color: #707070;
   font-size: 0.9em;
   font-weight: 500;
@@ -20,7 +20,9 @@ const ItemButton = styled.button`
 
   @media (max-width: 1050px) {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #0000001a;
     background-color: ${(props) => (props.subpage ? "#eeeeee" : "white")};
   }
 `;

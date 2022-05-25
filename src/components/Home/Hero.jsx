@@ -13,7 +13,7 @@ const ActiveSlide = styled.div`
   position: relative;
   width: 20em;
   height: 20em;
-  box-shadow: 5px 5px 20px 1px #afafaf;
+  box-shadow: 0px 3px 5px rgb(0 0 0 / 20%);
   background-color: white;
   z-index: 2;
 `;
@@ -40,8 +40,11 @@ const RightSlide = styled.div`
 `;
 
 const SlideShow = styled.div`
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  padding-bottom: 1.4em;
+  padding-top: 1.3em;
+  margin-bottom:1em;
 `;
 
 const HeroImages = styled.div`
