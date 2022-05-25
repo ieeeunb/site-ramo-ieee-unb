@@ -6,17 +6,25 @@ const MenuListItem = styled.li`
 `;
 
 const ItemButton = styled.button`
-  border-radius: 20%/50%;
+  border-radius: 18px;
   padding: 1em;
   border: none;
   background-color: white;
-  box-shadow: 5px 5px 20px 1px #afafaf;
+  box-shadow: 0px 3px 5px rgb(0 0 0 / 20%);
   color: #707070;
   font-size: 0.9em;
   font-weight: 500;
   cursor: pointer;
   width: 7em;
   position: relative;
+
+  @media (max-width: 1050px) {
+    width: 100%;
+    border-radius: 20px;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #0000001a;
+  }
 `;
 
 const SubItemList = styled.ul`
@@ -33,19 +41,24 @@ const SubItemList = styled.ul`
   transform-origin: top center;
 
   @keyframes growDown {
-    0% {
+    from {
       transform: scaleY(0);
     }
-    80% {
-      transform: scaleY(1.1);
-    }
-    100% {
+    to {
       transform: scaleY(1);
     }
   }
 
   li {
     margin: 0.5em 0;
+  }
+  @media (max-width: 1050px) {
+    position: static;
+    width: 100%;
+
+    li {
+      margin: 0;
+    }
   }
 `;
 
